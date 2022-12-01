@@ -12,3 +12,5 @@ if(st.button('Submit')):
 	st.write('Return:', txt)
 else:
 	st.write('Return:')
+	
+# to run: streamlit run app.py
