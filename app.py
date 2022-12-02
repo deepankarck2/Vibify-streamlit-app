@@ -1,16 +1,22 @@
 import streamlit as st
 from streamlit_option_menu import option_menu 
+from components.home import homes
+from components.output import outputs
 
-selected2 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'], 
-    icons=['house', 'cloud-upload', "list-task", 'gear'], 
-    menu_icon="cast", default_index=0, orientation="horizontal")
-	
-selected2
-txt = st.text_area('Please input test:', placeholder="Placeholder", height=140)
+selected = option_menu(None, ["Home", "App", "About Us"], 
+    icons=['house', 'cloud-upload', "bi-file-person"], 
+    menu_icon="cast", 
+    default_index=0, 
+    orientation="horizontal",
+     styles={
+        "container": {"padding": "0!important", "background-color": "#fafafa"},
 
-if(st.button('Submit')):
-	st.write('Return:', txt)
-else:
-	st.write('Return:')
+    }
+    )
 	
+if selected == "Home":
+    homes()
+if selected == "App":
+    outputs()
+        
 # to run: streamlit run app.py
