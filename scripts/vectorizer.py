@@ -13,7 +13,7 @@ def vectorize(cleaned_X):
     tokenizer.fit_on_texts(cleaned_X)
 
     # Create the sequences for each sentence, basically turning each word into its index position
-    sequences = tokenizer.texts_to_sequences(cleaned_X)
+    sequences = tokenizer.texts_to_sequences([cleaned_X])
     index_word = tokenizer.index_word
 
     # # Limiting our sequencer to only include 300 words
@@ -23,3 +23,5 @@ def vectorize(cleaned_X):
     cleaned_X = pad_sequences(sequences, maxlen=max_length, padding='post')
 
     return cleaned_X
+
+
