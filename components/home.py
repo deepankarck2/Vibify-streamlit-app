@@ -8,17 +8,19 @@ def homes():
     from tensorflow import keras
     import tensorflow as tf
 
-    model = tf.saved_model.load('models/Valence_Regression/LSTM_Valence_model')
-    
+    loaded_model = keras.models.load_model('models/Valence_Regression/LSTM_Valence_model.h5')
+
     txt = st.text_area('Please input test:', placeholder="Placeholder", height=140)
 
     if(st.button('Submit')):
         cleaned_data = clean_data(txt)
+        print(cleaned_data)
         vectorized_data = vectorize(cleaned_data)
+        print(vectorized_data)
 
-        prediction_valence = model(vectorized_data)
-        
+        prediction_valence = loaded_model.predict(vectorized_data)
+
         st.write('Return:', prediction_valence)
-        
+        outputs()
     else:
         st.write('Return:')

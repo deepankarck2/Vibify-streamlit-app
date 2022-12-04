@@ -9,13 +9,11 @@ selected = option_menu(None, ["Home", "App", "About Us"],
     default_index=0, 
     orientation="horizontal",
      styles={
-        "container": {"padding": "0!important", "background-color": "#fafafa"},
-
-    }
-    )
+        "container": {"padding": "0!important", "background-color": "#fafafa"},})
 	
 if selected == "Home":
-    homes()
+   homes()
+
 if selected == "App":
     outputs()
         
