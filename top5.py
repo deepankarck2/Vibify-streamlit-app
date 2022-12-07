@@ -48,10 +48,10 @@ def top5_func(cleaned_X):
     output_list = get_results(df, results, cleaned_X)
     return output_list
 
+    # OPTIMIZE: Need to figure out how to load the tfidf file
     # I need to compare tf_idfs (saved matrix) with query_term_matrix (user input that has been cv.transformed)
     # for use in: results = cosine_similarity(tf_idfs, query_term_matrix)
 
+    # does not work:
     # tf_idfs_top5 = sparse.load_npz("data/tf_idfs_top5.npz")
     # query_term_matrix = cv.transform([cleaned_X])
-    # results = cosine_similarity(tf_idfs_top5, query_term_matrix)
-    # results = results.reshape((-1,))

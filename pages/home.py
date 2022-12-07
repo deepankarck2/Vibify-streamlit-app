@@ -45,8 +45,6 @@ def homes():
     set_bg_hack_url()
     set_prompt_input_color()
 
-    emptylist = []
-
     txt = st.text_area('Please input test:',
                        placeholder="Placeholder", height=140)
 
@@ -57,7 +55,7 @@ def homes():
     if "prediction_valence" not in st.session_state:
         st.session_state["prediction_valence"] = ""
         st.session_state["prediction_genre"] = ""
-        st.session_state.top5_list = emptylist
+        st.session_state.top5_list = []
 
     if(st.button('Submit')):
         cleaned_data = clean_data(txt)
