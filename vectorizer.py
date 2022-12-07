@@ -2,8 +2,7 @@ def vectorize(cleaned_X):
     from tensorflow import keras
     from keras.utils import pad_sequences
     import json
-    from keras_preprocessing.text import tokenizer_from_json
-
+    from keras.preprocessing.text import tokenizer_from_json
 
     with open('tokenizer.json') as f:
         data = json.load(f)
