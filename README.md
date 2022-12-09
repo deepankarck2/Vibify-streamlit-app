@@ -1,4 +1,6 @@
 # Vibify - NLP Analysis on Lyrical Data
+Moving this repo https://github.com/CTPFallGroupProject/Music-Analysis-Machine_Learning to here
+
 
 Vibify (vibe-if-eye) is a web application that takes in lyrical data as input, passes it through our models and compares it against our database, and outputs a dashboard consisting of:
 
