@@ -13,9 +13,50 @@ selected = option_menu(None, ["Result", "Predict", "About Us"],
                        styles={
     "container": {"padding": "1!important", "background-color": "#fafafa"}, })
 
+def set_bg_hack_url():
+        '''
+        A function to unpack an image from url and set as bg.
+        Returns
+        -------
+        The background.
+        '''
+        st.markdown(
+            f"""
+            <style>
+            .stApp {{
+                background: url("https://c4.wallpaperflare.com/wallpaper/463/870/465/audio-music-earphones-apple-inc-wallpaper-preview.jpg");
+                background-size: cover
+            }}
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
+
+def set_prompt_input_color():
+    st.markdown(
+        f"""
+        <style>
+        .css-1n76uvr{{
+            color: white !important;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+set_bg_hack_url()
+set_prompt_input_color()
+
+dict = {
+    '0' : 'Country',
+    '1' : "Pop",
+    '2': "R&B",
+    '3' : 'Rap',
+    '4' : 'Rock',
+}
 
 st.write("Valence Prediction is: ", st.session_state['prediction_valence'])
-st.write("Genre Prediction is: ", st.session_state['prediction_genre'])
+st.write("Genre Prediction is: ", dict.get(str(st.session_state['prediction_genre'])))
 st.write("Top 5 Lyrically Similar Songs Are: \n")
 st.write("1) ", st.session_state.top5_list[0])
 st.write("2) ", st.session_state.top5_list[1])
