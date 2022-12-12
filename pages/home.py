@@ -70,6 +70,7 @@ def homes():
         st.session_state["prediction_valence"] = prediction_valence
         st.session_state["prediction_genre"] = prediction_genre
         st.session_state["top5_list"] = top5_list
+
         switch_page("result")
 
     else:
