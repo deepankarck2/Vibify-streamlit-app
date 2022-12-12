@@ -45,6 +45,8 @@ def homes():
     set_bg_hack_url()
     set_prompt_input_color()
 
+    print(pickle.format_version)
+
     txt = st.text_area('Please input test:',
                        placeholder="Placeholder", height=140)
 
