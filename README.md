@@ -1,71 +1,59 @@
-# Vibify - NLP Analysis on Lyrical Data
-Moving this repo https://github.com/CTPFallGroupProject/Music-Analysis-Machine_Learning to here
+# Vibify - AI-Powered Songwriting Companion
 
+Vibify, short for "Vibe-Identify," is a web application designed to support the songwriting process. Leveraging NLP (Natural Language Processing) and deep learning, this tool analyzes lyrical data, identifies its sentiment, and offers inspiration through lyrically similar songs.
 
-Vibify (vibe-if-eye) is a web application that takes in lyrical data as input, passes it through our models and compares it against our database, and outputs a dashboard consisting of:
+![Imgur](https://i.imgur.com/iAQgbMP.png)
+![Imgur](https://i.imgur.com/hxFR4UZ.png)
 
-- Positive/Negative Sentiment Analysis
-- The genre of the lyrics (Pop, Rock, R&B, Country, etc.)
-- Top-5 Lyrically Similar Songs
-- Word Cloud depicting Word Frequency
+## Who Can Benefit from Vibify?
 
-# Who is Vibify For?
-Vibify is a tool for songwriters and song-curious people to enhance their analysis and understanding of lyrics. Say you need to write a happy sounding song for a movie that you're scoring, but aren't sure how happy it sounds. Vibify will give you a continuous 0 (very sad) to 1 (very happy) rating based on existing songs that were used to train the model, helping you better understand how your song stacks up. Or maybe you've got writer's block and are looking for inspiration? Input the lyrics you have written so far, and Vibify returns the 5 most similar songs for you to peruse for content inspiration. 
+Vibify is tailored for songwriters, composers, and anyone intrigued by the art of songwriting. It assists in:
 
+- Assessing the emotional valence of lyrics, providing a spectrum from sadness to happiness
+- Overcoming writer's block by suggesting similar songs for inspiration
 
-# Table of Content:
-- [Vibify](#vibify)
-- [Who is Vibify For?](#who-is-vibify-for)
-- [Table of Content:](#table-of-content)
-  - [Members](#members)
-  - [Dependencies](#dependencies)
-  - [Datasets](#datasets)
-  - [App Features](#app-features)
-  - [Hosted on ](#hosted-on-)
-- [What's Next for Vibify](#whats-next) 
+## Core Features
 
+- **Sentiment Analysis:** Using TensorFlow and NLTK, Vibify accurately classifies lyrics into positive or negative sentiment categories
+- **Genre Detection:** It determines the genre of the lyrics, including Pop, Rock, R&B, Country, etc
+- **Song Recommendations:** Vibify suggests the top-5 lyrically similar songs, aiding in the creative process
 
-## Members
+## Technical Stack and Data Sources
 
-Vibify was created during CUNY Tech Prep's fall 2022 cohourt. The team consists of:
-- Aleksandra Georgievska (https://github.com/aleksgeorgi)
-- Deepankar
-- Stephen Williams 
+- **Frameworks and Libraries:** Streamlit, TensorFlow, NLTK, Scikit-learn
+- **Data Sources:** A comprehensive dataset from Kaggle and additional features from Genius.com
+- **Hosting:** Hosted on Streamlit.io, ensuring seamless user experience and accessibility
 
-## Dependencies
+## App Workflow
 
-- to add
+- **User Interface:** The app features a user-friendly navbar for easy navigation
+- **Dashboard:** Upon input submission, the dashboard dynamically displays the analysis results
+- **Reset Functionality:** Users can reset the dashboard to analyze new inputs
 
+## Project Development
+
+- Developed during CUNY Tech Prep's Fall 2022 cohort
+- Managed using Trello for task tracking and GitHub for version control
+- Regular team meetings and collaboration via Zoom and Slack
+
+## The Team Behind Vibify
+
+- Aleksandra Georgievska [@aleksgeorgi](https://github.com/aleksgeorgi)
+- Deepankar Chakraborty [@deepankarnk2](https://github.com/deepankarck2)
+- Stephen Williams [@svalentinow](https://github.com/Svalentinow)
+
+## Future Roadmap
+
+- **Dataset Expansion:** To include a wider range of songs and genres.
+- **Enhanced User Input Options:** Allowing genre-specific song recommendations.
+- **Audio Analysis:** Incorporating audio data for a more holistic sentiment analysis.
+
+## Explore Vibify
+
+Discover how Vibify can elevate your songwriting experience: [Vibify App](https://ctpfallgroupproject-vibify.streamlit.app/)
 
 ## Datasets
-- https://www.kaggle.com/datasets/edenbd/150k-lyrics-labeled-with-spotify-valence 
-- https://www.kaggle.com/datasets/saurabhshahane/spotgen-music-dataset 
+
+- https://www.kaggle.com/datasets/edenbd/150k-lyrics-labeled-with-spotify-valence
+- https://www.kaggle.com/datasets/saurabhshahane/spotgen-music-dataset
 - Additional featurs were added by webscraping Genius.com
-
-
-## App Features
-
-- The navbar allows the user to navigate to the Main page and an About Us page on the creators of the app
-- After input has been received, the main page produces the dashboard. A user can then reset the dashboard to enter a new input
-
-
-## Hosted on 
-
-- to add 
-
-
-## What's Next for Vibify?
-
-Improvements and additions we would like to make to Vibify in the future include:
-
-- An expanded dataset containing more songs and a larger set of genres
-- Additional inputs/filters from the user
-  - Example: Input lyrics & genre -> get similar songs from a particular genre only 
-- Audio analysis 
-  -  Ability to extract lyrics 
-  -  Ability to anylize positive/negative sentiment from the sound of the audio 
-
-
-
-
-

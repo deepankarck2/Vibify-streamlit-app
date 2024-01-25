@@ -77,3 +77,6 @@ def homes():
 
     else:
         st.write('Return:')
+
+
+homes()
